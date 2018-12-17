@@ -1,3 +1,7 @@
+//
+//  UIImageAdditions.h
+//  Created by Devin Ross on 7/25/09.
+//
 /*
 
    tapku.com || http://github.com/devinross/tapkulibrary
@@ -25,11 +29,12 @@
 
  */
 
-#import "NSDate+TKUAdditions.h"
 
-#import "TKUCalendarMonthView.h"
-#import "TKUCalendarMonthViewController.h"
-#import "TKULoadingHUDView.h"
+@interface UIImage (TKUAdditions)
 
-#import "UIImage+TKUAdditions.h"
-#import "UIView+TKUAdditions.h"
++ (UIImage *)imageFromPath:(NSString *)URL;
+
+- (void)drawInRect:(CGRect)rect asAlphaMaskForColor:(CGFloat[])color;
+- (void)drawInRect:(CGRect)rect asAlphaMaskForGradient:(CGFloat[])colors;
+
+@end
